@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NhapDiemMW</class>
+ <widget class="QMainWindow" name="NhapDiemMW">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>873</width>
+    <height>525</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hệ thống trợ giúp chọn ngành 2018</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lb_step">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>30</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Bước 1 of 9</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>90</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nhập điểm các môn thuộc khôi thi:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_back">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>430</y>
+      <width>91</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Quay lại</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_save_continue">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>430</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lưu và tiếp tục</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_skip">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>430</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bỏ qua bước này</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>120</y>
+      <width>781</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="1">
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="comboBox_6"/>
+     </item>
+     <item row="2" column="3">
+      <widget class="QComboBox" name="comboBox_4"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Môn Lý</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Môn Toán</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Môn Sinh</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="comboBox_5"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Môn Hóa</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QComboBox" name="comboBox_3"/>
+     </item>
+     <item row="0" column="6">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>Thi thử</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Học kỳ 2 lớp 10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Học kỳ 1 lớp 11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Học kỳ 2 lớp 11</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QComboBox" name="comboBox_2"/>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Học kỳ 1 lớp 10</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>Học kỳ 1 lớp 12</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QLabel" name="label_13">
+       <property name="text">
+        <string>Thi HSG(nếu c)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="comboBox_7"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="comboBox_8"/>
+     </item>
+     <item row="1" column="4">
+      <widget class="QComboBox" name="comboBox_9"/>
+     </item>
+     <item row="1" column="5">
+      <widget class="QComboBox" name="comboBox_10"/>
+     </item>
+     <item row="1" column="6">
+      <widget class="QComboBox" name="comboBox_11"/>
+     </item>
+     <item row="1" column="7">
+      <widget class="QComboBox" name="comboBox_12"/>
+     </item>
+     <item row="2" column="6">
+      <widget class="QComboBox" name="comboBox_14"/>
+     </item>
+     <item row="2" column="7">
+      <widget class="QComboBox" name="comboBox_13"/>
+     </item>
+     <item row="2" column="5">
+      <widget class="QComboBox" name="comboBox_15"/>
+     </item>
+     <item row="2" column="4">
+      <widget class="QComboBox" name="comboBox_16"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QComboBox" name="comboBox_17"/>
+     </item>
+     <item row="3" column="3">
+      <widget class="QComboBox" name="comboBox_18"/>
+     </item>
+     <item row="4" column="2">
+      <widget class="QComboBox" name="comboBox_19"/>
+     </item>
+     <item row="4" column="3">
+      <widget class="QComboBox" name="comboBox_20"/>
+     </item>
+     <item row="3" column="4">
+      <widget class="QComboBox" name="comboBox_21"/>
+     </item>
+     <item row="4" column="4">
+      <widget class="QComboBox" name="comboBox_22"/>
+     </item>
+     <item row="3" column="7">
+      <widget class="QComboBox" name="comboBox_24"/>
+     </item>
+     <item row="3" column="5">
+      <widget class="QComboBox" name="comboBox_23"/>
+     </item>
+     <item row="3" column="6">
+      <widget class="QComboBox" name="comboBox_25"/>
+     </item>
+     <item row="4" column="5">
+      <widget class="QComboBox" name="comboBox_26"/>
+     </item>
+     <item row="4" column="6">
+      <widget class="QComboBox" name="comboBox_27"/>
+     </item>
+     <item row="4" column="7">
+      <widget class="QComboBox" name="comboBox_28"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>873</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
