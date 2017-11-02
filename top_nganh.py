@@ -7,6 +7,7 @@ from YeuThichUI import *
 from top_truong import TopTruong
 import pymysql
 import json
+import ControlDatabaseAccess as CD
 
 
 class TopNganh(QMainWindow, Ui_YeuThichMW):
@@ -22,13 +23,13 @@ class TopNganh(QMainWindow, Ui_YeuThichMW):
                                    QApplication.UnicodeUTF8))
 
         # Lay list nganh tu database
-        self.__nganh = self.get_nganh()
+        self.__nganh = CD.get_table('nganh')
         self.__hs_topNganh = []
         # Them slider top nganh
         for i in range(3):
             cb_nganh = QtGui.QComboBox(self.gridLayoutWidget)
             for key in range(len(self.__nganh)):
-                cb_nganh.addItem(self.__nganh[key]['ten_nganh'], key)
+                cb_nganh.addItem(self.__nganh[key]['ten_nganh'][:30], key)
             self.gridLayout.addWidget(cb_nganh, i, 0, 1, 1)
             lb_min = QtGui.QLabel(self.gridLayoutWidget)
             lb_min.setText('0')
@@ -84,22 +85,3 @@ class TopNganh(QMainWindow, Ui_YeuThichMW):
     #     self.hide()
     #     self.next_window.show()
 
-    def get_nganh(self):
-        # Connect to the database
-        connection = pymysql.connect(host='localhost',
-                                     user='root',
-                                     password='helloworld',
-                                     db='enrollment_database',
-                                     charset='utf8mb4',
-                                     cursorclass=pymysql.cursors.DictCursor)
-        result = []
-        try:
-            with connection.cursor() as cursor:
-                # Read a single record
-                sql = "SELECT `*` FROM `nganh`"
-                cursor.execute(sql)
-                result = cursor.fetchall()
-
-        finally:
-            connection.close()
-            return result

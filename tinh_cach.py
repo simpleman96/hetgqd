@@ -15,7 +15,7 @@ class NhomTC(QMainWindow, Ui_YeuThichMW):
         self.setGeometry(300, 100, 900, 550)
         self.student_p = pre_window.student_p
 
-        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 4 of 8", None, QApplication.UnicodeUTF8))
+        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 4 của 8", None, QApplication.UnicodeUTF8))
         self.lb_typeFavor.setText(
             QApplication.translate("YeuThichMW", "Mức độ phù hợp trên từng nhóm tính cách của bạn:", None,
                                    QApplication.UnicodeUTF8))

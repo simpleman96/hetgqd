@@ -3,7 +3,7 @@
 
 import sys
 import numpy as np
-from ControlDatabaseAccess import *
+import ControlDatabaseAccess as CD
 import ControlCalculation as CC
 
 
@@ -85,25 +85,25 @@ def caculator(student_input):
     # ********************** GET DATA FROM DATABASE
 
     # Get a dictionary represent the suitable criterion between major and groups of subjects
-    typicalSubjectFavority = ControlDatabaseAccess.getDictionaryFromDatabase('nganh_monhoc', ('ten_nganh',), (
+    typicalSubjectFavority = CD.getDictionaryFromDatabase('nganh_monhoc', ('ten_nganh',), (
         'tu_nhien', 'xa_hoi', 'ngoai_ngu', 'the_duc', 'cong_nghe', 'nang_khieu'))
     # Get a dictionary represent the suitable criterion between major and fields
-    typicalFieldFavority = ControlDatabaseAccess.getDictionaryFromDatabase('nganh_linhvuc', ('ten_nganh',), (
+    typicalFieldFavority = CD.getDictionaryFromDatabase('nganh_linhvuc', ('ten_nganh',), (
         'nhan_van', 'tu_nhien', 'cong_nghe', 'kinh_te', 'y_duoc', 'quoc_phong', 'nang_khieu'))
     # Get a dictionary represent the suitable criterion between major and groups of characters
-    typicalCharacterFavority = ControlDatabaseAccess.getDictionaryFromDatabase('nganh_tinhcach', ('ten_nganh',), (
+    typicalCharacterFavority = CD.getDictionaryFromDatabase('nganh_tinhcach', ('ten_nganh',), (
         'thong_tri', 'anh_huong', 'kien_dinh', 'tuan_thu'))
     # Get a dictionary contain the tuition fee of all colleges
-    collegeFees = ControlDatabaseAccess.getDictionaryFromDatabase('truong_hocphi', ('ten_truong',), ('muc_hoc_phi',))
+    collegeFees = CD.getDictionaryFromDatabase('truong_hocphi', ('ten_truong',), ('muc_hoc_phi',))
     # Get a dictionary contain the job rates of all majors
-    jobRates = ControlDatabaseAccess.getDictionaryFromDatabase('nganh_tyle', ('ten_nganh',), ('ty_le',))
+    jobRates = CD.getDictionaryFromDatabase('nganh_tyle', ('ten_nganh',), ('ty_le',))
     # Get a dictionary contain the rank of all colleges
-    collegeRanks = ControlDatabaseAccess.getDictionaryFromDatabase('truong_rank', ('ten_truong',), ('rank',))
+    collegeRanks = CD.getDictionaryFromDatabase('truong_rank', ('ten_truong',), ('rank',))
     # Get a dictionary contain the subjecs of exam blocks
-    dictOfExamBlocks = ControlDatabaseAccess.getDictionaryFromDatabase('khoi_thi', ('ten_khoi',),
+    dictOfExamBlocks = CD.getDictionaryFromDatabase('khoi_thi', ('ten_khoi',),
                                                                        ('mon_1', 'mon_2', 'mon_3'))
     # Get a dictionary contain standard marks in recent three years
-    major_college_examBlock = ControlDatabaseAccess.getDictionaryFromDatabase('nganh_truong_khoi',
+    major_college_examBlock = CD.getDictionaryFromDatabase('nganh_truong_khoi',
                                                                               ('ten_nganh', 'ten_truong', 'ten_khoi'), (
                                                                                   'diem_nam_1', 'diem_nam_2',
                                                                                   'diem_nam_3'))

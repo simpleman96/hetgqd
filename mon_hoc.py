@@ -15,7 +15,7 @@ class NhomMH(QMainWindow, Ui_YeuThichMW):
         self.setGeometry(300, 100, 900, 550)
         self.student_p = pre_window.student_p
 
-        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 2 of 8", None, QApplication.UnicodeUTF8))
+        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 2 của 8", None, QApplication.UnicodeUTF8))
         self.lb_typeFavor.setText(QApplication.translate("YeuThichMW", "Mức độ yêu thích trên từng nhóm môn học của bạn:", None, QApplication.UnicodeUTF8))
 
         self.__nhomMH = ['Nhóm Tự Nhiên','Nhóm Xã Hội', 'Nhóm Ngoại Ngữ', 'Nhóm Thể Dục', 'Nhóm Công Nghệ', 'Nhóm Nghệ Thuật']

@@ -7,6 +7,7 @@ from YeuThichUI import *
 from hoan_canh import HoanCanh
 import pymysql
 import json
+import ControlDatabaseAccess as CD
 
 
 class TopTruong(QMainWindow, Ui_YeuThichMW):
@@ -20,13 +21,13 @@ class TopTruong(QMainWindow, Ui_YeuThichMW):
         self.lb_typeFavor.setText(
             QApplication.translate("YeuThichMW", "Chọn 3 trường bạn yêu thích nhất cùng mức độ thích:", None,
                                    QApplication.UnicodeUTF8))
-        self.__truong = self.get_truong()
+        self.__truong = CD.get_table('truong')
         self.__hs_topTruong = []
         # Them slider top truong
         for i in range(3):
             cb_truong = QtGui.QComboBox(self.gridLayoutWidget)
             for key in range(len(self.__truong)):
-                cb_truong.addItem(self.__truong[key]['ten_truong'], key)
+                cb_truong.addItem(self.__truong[key]['ten_truong'][:30], key)
             self.gridLayout.addWidget(cb_truong, i, 0, 1, 1)
             lb_min = QtGui.QLabel(self.gridLayoutWidget)
             lb_min.setText('0')
@@ -81,23 +82,3 @@ class TopTruong(QMainWindow, Ui_YeuThichMW):
     # def skip_step(self):
     #     self.hide()
     #     self.next_window.show()
-
-    def get_truong(self):
-        # Connect to the database
-        connection = pymysql.connect(host='localhost',
-                                     user='root',
-                                     password='helloworld',
-                                     db='enrollment_database',
-                                     charset='utf8mb4',
-                                     cursorclass=pymysql.cursors.DictCursor)
-        result = []
-        try:
-            with connection.cursor() as cursor:
-                # Read a single record
-                sql = "SELECT `*` FROM `truong`"
-                cursor.execute(sql)
-                result = cursor.fetchall()
-
-        finally:
-            connection.close()
-            return result

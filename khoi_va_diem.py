@@ -7,6 +7,7 @@ from PySide.QtCore import *
 from mon_hoc import NhomMH
 import pymysql
 import json
+import ControlDatabaseAccess as CD
 
 
 class KhoiDiem(QMainWindow, KhoiVaDiemUI.Ui_KhoiDiemMW):
@@ -18,7 +19,7 @@ class KhoiDiem(QMainWindow, KhoiVaDiemUI.Ui_KhoiDiemMW):
         self.student_p = pre_window.student_p
 
         # Cac loai khoi thi
-        self.__khoi_thi = self.get_khoi_thi()
+        self.__khoi_thi = CD.get_table('khoi_thi')
         for key in range(len(self.__khoi_thi)):
             self.cb_khoi.addItem(self.__khoi_thi[key]['ten_khoi'], key)
 
@@ -119,21 +120,3 @@ class KhoiDiem(QMainWindow, KhoiVaDiemUI.Ui_KhoiDiemMW):
     #     self.hide()
     #     self.next_window.show()
 
-    def get_khoi_thi(self):
-        # Connect to the database
-        connection = pymysql.connect(host='localhost',
-                                     user='root',
-                                     password='helloworld',
-                                     db='enrollment_database',
-                                     charset='utf8mb4',
-                                     cursorclass=pymysql.cursors.DictCursor)
-        result = []
-        try:
-            with connection.cursor() as cursor:
-                # Read a single record
-                sql = "SELECT `*` FROM `khoi_thi`"
-                cursor.execute(sql)
-                result = cursor.fetchall()
-        finally:
-            connection.close()
-            return result

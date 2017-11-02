@@ -15,7 +15,7 @@ class NhomLV(QMainWindow, Ui_YeuThichMW):
         self.setGeometry(300, 100, 900, 550)
         self.student_p = pre_window.student_p
 
-        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 3 of 8", None, QApplication.UnicodeUTF8))
+        self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 3 của 8", None, QApplication.UnicodeUTF8))
         self.lb_typeFavor.setText(
             QApplication.translate("YeuThichMW", "Mức độ yêu thích trên từng nhóm lĩnh vực của bạn:", None,
                                    QApplication.UnicodeUTF8))
