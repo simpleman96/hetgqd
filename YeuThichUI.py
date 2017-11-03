@@ -17,7 +17,7 @@ class Ui_YeuThichMW(object):
         self.centralwidget = QtGui.QWidget(YeuThichMW)
         self.centralwidget.setObjectName("centralwidget")
         self.lb_step = QtGui.QLabel(self.centralwidget)
-        self.lb_step.setGeometry(QtCore.QRect(60, 30, 121, 31))
+        self.lb_step.setGeometry(QtCore.QRect(60, 30, 200, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.lb_step.setFont(font)
@@ -66,7 +66,7 @@ class Ui_YeuThichMW(object):
 
     def retranslateUi(self, YeuThichMW):
         YeuThichMW.setWindowTitle(QtGui.QApplication.translate("YeuThichMW", "Hệ thống trợ giúp chọn ngành 2018", None, QtGui.QApplication.UnicodeUTF8))
-        self.lb_step.setText(QtGui.QApplication.translate("YeuThichMW", "Bước 2 of 9", None, QtGui.QApplication.UnicodeUTF8))
+        # self.lb_step.setText(QtGui.QApplication.translate("YeuThichMW", "Bước 2 of 9", None, QtGui.QApplication.UnicodeUTF8))
         self.btn_back.setText(QtGui.QApplication.translate("YeuThichMW", "Quay lại", None, QtGui.QApplication.UnicodeUTF8))
         self.btn_save_continue.setText(QtGui.QApplication.translate("YeuThichMW", "Lưu và tiếp tục", None, QtGui.QApplication.UnicodeUTF8))
         self.btn_skip.setText(QtGui.QApplication.translate("YeuThichMW", "Bỏ qua bước này", None, QtGui.QApplication.UnicodeUTF8))

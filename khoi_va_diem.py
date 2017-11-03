@@ -15,6 +15,7 @@ class KhoiDiem(QMainWindow, KhoiVaDiemUI.Ui_KhoiDiemMW):
         super(KhoiDiem, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
 
         self.student_p = pre_window.student_p
 
@@ -101,7 +102,7 @@ class KhoiDiem(QMainWindow, KhoiVaDiemUI.Ui_KhoiDiemMW):
                 for col in range(9 * row + 1, 9 * (row + 1)):
                     t_index = self.gl_nhapDiem.itemAt(col).widget().currentIndex()
                     diem.append(self.gl_nhapDiem.itemAt(col).widget().itemData(t_index))
-                diem_mon[unicode(self.__mon_thi[row - 1])] = diem
+                diem_mon[u'{0}'.format(self.__mon_thi[row - 1])] = diem
 
             with open(self.student_p, 'r') as stu_f:
                 student = json.load(stu_f)

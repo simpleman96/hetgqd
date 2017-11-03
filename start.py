@@ -15,6 +15,7 @@ class Start(QMainWindow, StartUI.Ui_MainWindow):
         super(Start, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
 
         self.student_p = stu_input_p
         self.next_window = KhoiDiem(self)

@@ -15,6 +15,8 @@ class TopNganh(QMainWindow, Ui_YeuThichMW):
         super(TopNganh, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
+
         self.student_p = pre_window.student_p
 
         self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 5 of 8", None, QApplication.UnicodeUTF8))
@@ -61,7 +63,7 @@ class TopNganh(QMainWindow, Ui_YeuThichMW):
         flat = 0
         for row in range(3):
             nganh = self.gridLayout.itemAt(4 * row).widget().currentText()
-            if top_nganh.has_key(nganh):
+            if nganh in top_nganh.keys():
                 flat = 1
                 break
             else:

@@ -17,7 +17,7 @@ class Ui_KhoiDiemMW(object):
         self.centralwidget = QtGui.QWidget(KhoiDiemMW)
         self.centralwidget.setObjectName("centralwidget")
         self.lb_step = QtGui.QLabel(self.centralwidget)
-        self.lb_step.setGeometry(QtCore.QRect(20, 30, 201, 31))
+        self.lb_step.setGeometry(QtCore.QRect(20, 30, 250, 31))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.lb_step.setFont(font)

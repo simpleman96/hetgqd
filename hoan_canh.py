@@ -13,6 +13,8 @@ class HoanCanh(QMainWindow, Ui_YeuThichMW):
         super(HoanCanh, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
+
         self.student_p = pre_window.student_p
 
         self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 7 của 8", None, QApplication.UnicodeUTF8))

@@ -13,6 +13,8 @@ class KetQua(QMainWindow, Ui_KetQuaMW):
         super(KetQua, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
+
 
         # self.__ket_qua = []       # Gom ten cac nganh va giai thich tuong ung
         # self.top_result = top_result

@@ -15,6 +15,8 @@ class TopTruong(QMainWindow, Ui_YeuThichMW):
         super(TopTruong, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
+
         self.student_p = pre_window.student_p
 
         self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 6 of 8", None, QApplication.UnicodeUTF8))
@@ -59,7 +61,7 @@ class TopTruong(QMainWindow, Ui_YeuThichMW):
         flat = 0
         for row in range(3):
             truong = self.gridLayout.itemAt(4 * row).widget().currentText()
-            if top_truong.has_key(truong):
+            if truong in top_truong.keys():
                 flat = 1
                 break
             else:

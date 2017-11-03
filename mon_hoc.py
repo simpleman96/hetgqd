@@ -13,6 +13,7 @@ class NhomMH(QMainWindow, Ui_YeuThichMW):
         super(NhomMH, self).__init__()
         self.setupUi(self)
         self.setGeometry(300, 100, 900, 550)
+        self.setFixedSize(900, 550)
         self.student_p = pre_window.student_p
 
         self.lb_step.setText(QApplication.translate("YeuThichMW", "Bước 2 của 8", None, QApplication.UnicodeUTF8))
